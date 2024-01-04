@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3</title>
+    <style>
+      /* Responsive styles for small screens */
+      @media only screen and (max-width: 500px) {
+        table {
+          width: 100%;
+        }
+        .form-row {
+          display: flex;
+          flex-direction: column;
+        }
+        td {
+          margin: 0.3rem 0;
+        }
+
+        .languages span {
+          display: block;
+        }
+      }
+
+      /* Styles for the form layout */
+      table {
+        width: 50%;
+        border-spacing: 1rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      textarea,
+      select {
+        /* occupy all the width of table data tag */
+        width: 100%;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Form for user information -->
+    <form>
+      <table>
+        <!-- Row for First Name and Last Name -->
+        <tr class="form-row">
+          <td>
+            <!-- First Name -->
+            <label for="firstName">First Name:</label> <br />
+            <input type="text" id="firstName" name="firstName" />
+          </td>
+          <td>
+            <!-- Last Name -->
+            <label for="lastName">Last Name:</label> <br />
+            <input type="text" id="lastName" name="lastName" />
+          </td>
+        </tr>
+
+        <!-- Row for Email and Contact Number -->
+        <tr class="form-row">
+          <td>
+            <!-- Email -->
+            <label for="email">Email:</label> <br />
+            <input type="email" id="email" name="email" />
+          </td>
+          <td>
+            <!-- Contact Number -->
+            <label for="contactNumber">Contact Number:</label> <br />
+            <input type="tel" id="contactNumber" name="contactNumber" />
+          </td>
+        </tr>
+
+        <!-- Row for Username and Password -->
+        <tr class="form-row">
+          <td>
+            <!-- User Name -->
+            <label for="username">Username:</label> <br />
+            <input type="text" id="username" name="username" />
+          </td>
+          <td>
+            <!-- Password -->
+            <label for="password">Password:</label> <br />
+            <input type="password" id="password" name="password" />
+          </td>
+        </tr>
+
+        <!-- Row for Address and Gender -->
+        <tr class="form-row">
+          <td>
+            <!-- Address -->
+            <label for="address">Address:</label> <br />
+            <textarea name="address" id="address" cols="20" rows="1"></textarea>
+          </td>
+          <td class="languages gender">
+            <!-- Gender -->
+            <label for="gender">Gender:</label> <br />
+            <span>
+              <input type="radio" name="gender" id="male" />
+              <label for="male">Male</label>
+            </span>
+            <span>
+              <input type="radio" name="gender" id="female" />
+              <label for="female">Female</label>
+            </span>
+          </td>
+        </tr>
+
+        <!-- Row for Qualification and Experience -->
+        <tr class="form-row">
+          <td>
+            <!-- dropdown for qualification-->
+            <label for="qualification">Qualification:</label><br />
+            <select id="qualification" name="qualification">
+              <option value="">--Select --</option>
+            </select>
+          </td>
+          <td>
+            <label for="experience">Experience:</label><br />
+            <!-- dropdown for experience-->
+            <select id="experience" name="experience">
+              <option value="">--Select--</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- Row for Coding Languages -->
+        <tr class="form-row">
+          <td colspan="2" class="languages">
+            <label for="codingLanguages">Coding Languages:</label>
+            <!-- Ckeckbox for coding languages -->
+            <span>
+              <input
+                type="checkbox"
+                id="c++"
+                name="codingLanguages"
+                value="C++"
+              />
+              <label for="c++">C/C++</label>
+            </span>
+            <span>
+              <input
+                type="checkbox"
+                id="java"
+                name="codingLanguages"
+                value="Java"
+              />
+              <label for="java">Java</label>
+            </span>
+            <span>
+              <input
+                type="checkbox"
+                id="ch"
+                name="codingLanguages"
+                value="CH"
+              />
+              <label for="ch">CH</label>
+            </span>
+            <span>
+              <input
+                type="checkbox"
+                id="php"
+                name="codingLanguages"
+                value="PHP"
+              />
+              <label for="php">PHP</label>
+            </span>
+            <span>
+              <input
+                type="checkbox"
+                id="python"
+                name="codingLanguages"
+                value="Python"
+              />
+              <label for="python">Python</label>
+            </span>
+          </td>
+        </tr>
+
+        <!-- Submit button -->
+        <tr class="form-row">
+          <td colspan="2"><input type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
